@@ -1,22 +1,19 @@
 import http from "http"
+import { jsonBodyHandler } from "./middlewares/jsonBodyHandler.js"
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   const { method, url } = req
+
+  await jsonBodyHandler(req, res)
 
   if (method === "GET" && url === "/products") {
     return res.writeHead(200).end("Lista de produtos!")
   }
 
   if (method === "POST" && url === "/products") {
-    return res.writeHead(201).end("Produto criado com sucesso!")
-  }
+    console.log(req.body)
 
-  if (method === "PUT" && url === "/products") {
-    return res.writeHead(200).end("Produto atualizado com sucesso!")
-  }
-
-  if (method === "DELETE" && url === "/products") {
-    return res.writeHead(204).end("Produto deletado com sucesso!")
+    return res.writeHead(201).end(JSON.stringify(req.body))
   }
 
   return res.writeHead(404).end("Nenhuma rota encontrada!")
