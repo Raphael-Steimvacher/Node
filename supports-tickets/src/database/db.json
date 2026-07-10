@@ -1,1 +1,13 @@
-{}
+{
+  "tickets": [
+    {
+      "id": "9ecee301-b153-4641-ad21-548770f4a571",
+      "equipment": "Computador",
+      "description": "Computador não está ligando.",
+      "user_name": "Raphael Piccoli",
+      "status": "open",
+      "created_at": "2026-07-10T20:06:46.406Z",
+      "updated_at": "2026-07-10T20:06:46.406Z"
+    }
+  ]
+}
