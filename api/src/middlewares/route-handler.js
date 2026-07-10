@@ -1,5 +1,8 @@
+import { Database } from "../database.js"
 import { routes } from "../routes.js"
 import { extractQueryParams } from "../utils/extract-query-params.js"
+
+const database = new Database()
 
 export function routeHandler(req, res) {
   const route = routes.find((route) => {
@@ -14,7 +17,7 @@ export function routeHandler(req, res) {
     req.params = params
     req.query = query ? extractQueryParams(query) : {}
 
-    return route.controller(req, res)
+    return route.controller({ req, res, database })
   }
 
   return res.writeHead(404).end("Nenhuma rota encontrada!")
