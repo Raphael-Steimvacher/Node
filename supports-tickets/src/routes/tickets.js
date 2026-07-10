@@ -3,7 +3,7 @@ export const tickets = [
     method: "POST",
     path: "/tickets",
     controller: (request, response) => {
-      // função
+      return response.writeHead(201).end(JSON.stringify(request.body))
     },
   },
 ]
