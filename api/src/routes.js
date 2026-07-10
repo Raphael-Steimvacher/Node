@@ -1,11 +1,11 @@
-import { parseRoutePath } from "./utils/parseRoutePath.js"
+import { parseRoutePath } from "./utils/parse-route-path.js"
 
 export const routes = [
   {
     method: "GET",
     path: "/products",
     controller: (req, res) => {
-      return res.writeHead(200).end("Lista de Produtos!")
+      return res.writeHead(200).end(JSON.stringify(req.query))
     },
   },
   {
