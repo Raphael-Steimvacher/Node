@@ -7,6 +7,9 @@ export function routeHandler(req, res) {
 
   if (route) {
     const routeParams = req.url.match(route.path)
+
+    console.log(routeParams)
+
     const { ...params } = routeParams.groups
 
     req.params = params
