@@ -1,1 +1,22 @@
-{"tickets":[{"id":"9ecee301-b153-4641-ad21-548770f4a571","equipment":"Computador","description":"Computador não está ligando.","user_name":"Raphael Piccoli","status":"open","created_at":"2026-07-10T20:06:46.406Z","updated_at":"2026-07-10T20:06:46.406Z"},{"id":"a1875338-7aad-4c38-bedc-67e458af4780","equipment":"Cabo HDMI","description":"Preciso de um novo cabo HDMI.","user_name":"Raphael Piccoli","status":"open","created_at":"2026-07-10T20:15:30.139Z","updated_at":"2026-07-10T20:15:30.139Z"}]}
+{
+  "tickets": [
+    {
+      "id": "9ecee301-b153-4641-ad21-548770f4a571",
+      "equipment": "Computador",
+      "description": "Computador não está ligando.",
+      "user_name": "Raphael Piccoli",
+      "status": "closed",
+      "created_at": "2026-07-10T20:06:46.406Z",
+      "updated_at": "2026-07-10T20:06:46.406Z"
+    },
+    {
+      "id": "a1875338-7aad-4c38-bedc-67e458af4780",
+      "equipment": "Cabo HDMI",
+      "description": "Preciso de um novo cabo HDMI.",
+      "user_name": "Raphael Piccoli",
+      "status": "open",
+      "created_at": "2026-07-10T20:15:30.139Z",
+      "updated_at": "2026-07-10T20:15:30.139Z"
+    }
+  ]
+}
