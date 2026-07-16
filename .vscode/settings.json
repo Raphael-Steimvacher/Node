@@ -1,0 +1,42 @@
+{
+  // ===== Editor do projeto =====
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // ===== JavaScript e TypeScript =====
+  "js/ts.suggest.autoImports": true,
+  "js/ts.preferences.importModuleSpecifierEnding": "js",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  // ===== Ações executadas ao salvar =====
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // ===== ESLint =====
+  "eslint.format.enable": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Procura package.json e eslint.config.js nas subpastas
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+
+  // ===== Spell Checker =====
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.ignorePaths": [
+    "**/node_modules/**",
+    "package-lock.json",
+    "pnpm-lock.yaml"
+  ]
+}
