@@ -19,7 +19,7 @@ export const tickets = [
     path: "/tickets/:id",
     controller: update,
   },
-    {
+  {
     method: "PATCH",
     path: "/tickets/:id/close",
     controller: updateStatus,

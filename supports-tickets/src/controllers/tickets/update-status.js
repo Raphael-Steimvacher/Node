@@ -1,7 +1,8 @@
 export function updateStatus({ request, response, database }) {
   const { id } = request.params
+  const { solution } = request.body
 
-  const closeTicket = database.update("tickets", id, { status: "closed" })
+  database.update("tickets", id, { status: "closed", solution })
 
-  return response.writeHead(200).end("OK")
+  return response.writeHead(201).end()
 }
