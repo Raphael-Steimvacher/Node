@@ -1,4 +1,4 @@
-export function update({ request, response, database }) {
+export function updateTicket({ request, response, database }) {
   const { id } = request.params
   const { equipment, description, status } = request.body
 
@@ -9,5 +9,5 @@ export function update({ request, response, database }) {
     updated_at: new Date(),
   })
 
-  return response.writeHead(201).end()
+  return response.writeHead(201).end("Ticket atualizado com sucesso!")
 }

@@ -1,27 +1,33 @@
-import { create } from "../controllers/tickets/create.js"
-import { index } from "../controllers/tickets/index.js"
-import { updateStatus } from "../controllers/tickets/update-status.js"
-import { update } from "../controllers/tickets/update.js"
+import { createTicket } from "../controllers/tickets/create.js"
+import { indexTickets } from "../controllers/tickets/index.js"
+import { removeTicket } from "../controllers/tickets/remove.js"
+import { updateStatusTicket } from "../controllers/tickets/update-status.js"
+import { updateTicket } from "../controllers/tickets/update.js"
 
 export const tickets = [
   {
     method: "POST",
     path: "/tickets",
-    controller: create,
+    controller: createTicket,
   },
   {
     method: "GET",
     path: "/tickets",
-    controller: index,
+    controller: indexTickets,
   },
   {
     method: "PUT",
     path: "/tickets/:id",
-    controller: update,
+    controller: updateTicket,
   },
   {
     method: "PATCH",
     path: "/tickets/:id/close",
-    controller: updateStatus,
+    controller: updateStatusTicket,
+  },
+  {
+    method: "DELETE",
+    path: "/tickets/:id",
+    controller: removeTicket,
   },
 ]

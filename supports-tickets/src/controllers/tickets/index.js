@@ -1,4 +1,4 @@
-export function index({ request, response, database }) {
+export function indexTickets({ request, response, database }) {
   const { status } = request.query
 
   const filters = status ? { status } : null

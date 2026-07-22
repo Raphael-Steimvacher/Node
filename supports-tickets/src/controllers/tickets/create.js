@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto"
 
-export function create({ request, response, database }) {
+export function createTicket({ request, response, database }) {
   const { equipment, description, user_name } = request.body
 
   const ticket = {
