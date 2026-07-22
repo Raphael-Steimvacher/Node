@@ -26,6 +26,18 @@
       "skipFiles": ["<node_internals>/**"]
     },
     {
+      "name": "api-rest: npm run dev",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/api-rest",
+      "console": "externalTerminal",
+      "restart": true,
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
       "name": "Node: depurar arquivo aberto",
       "type": "node",
       "request": "launch",
