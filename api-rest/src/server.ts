@@ -1,17 +1,13 @@
-import express from 'express'
+import express from "express"
+import { routes } from "./routes/index.js"
 
 const PORT = 3333
 
 const app = express()
-
-app.get("/products/:id", (request, response) => {
-
-  const { id } = request.params
-
-  response.send(`Hello world! ${id}`)
-})
+app.use(express.json())
+// app.use(myMiddleware)
+app.use(routes)
 
 app.listen(PORT, () => {
   console.log(`Server is running at ${PORT}`)
 })
-

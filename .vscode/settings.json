@@ -5,9 +5,7 @@
   "editor.formatOnSave": true,
 
   // ===== JavaScript e TypeScript =====
-  "js/ts.suggest.autoImports": true,
-  "js/ts.preferences.importModuleSpecifierEnding": "js",
-  "js/ts.updateImportsOnFileMove.enabled": "always",
+  // "js/ts.suggest.autoImports": true,
 
   // ===== Ações executadas ao salvar =====
   "editor.codeActionsOnSave": {
