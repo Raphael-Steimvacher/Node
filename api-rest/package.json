@@ -1,6 +1,7 @@
 {
   "name": "api-rest",
   "version": "1.0.0",
+  "type": "module",
   "description": "criando API REST com Node.js",
   "main": "src/server.ts",
   "scripts": {
@@ -9,10 +10,12 @@
   "author": "Raphael Piccoli",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "tsx": "^4.23.1"
+    "express": "^5.2.1"
   }
 }
