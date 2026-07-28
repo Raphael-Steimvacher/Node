@@ -1,4 +1,5 @@
 import type { Request, Response } from "express"
+import z from "zod"
 
 export class ProductsController {
   /**
@@ -18,8 +19,12 @@ export class ProductsController {
   public show() {}
 
   public create(request: Request, response: Response) {
-    const { name, price } = request.body
+    const bodySchema = z.object({
+      name: z.string(),
+      price: z.number(),
+    })
 
+    const { name, price } = bodySchema.parse(request.body)
     // throw new AppError("Erro do cliente!")
 
     response.status(201).json(`Hello world! ${name} - ${price}`)
