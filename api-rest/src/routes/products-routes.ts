@@ -1,22 +1,12 @@
-import type { Request, Response } from "express"
 import { Router } from "express"
+import { ProductsController } from "../controllers/products-controller.js"
 import { myMiddleware } from "../middleware/my-middleware.js"
 
 const productsRoutes = Router()
+const productsController = new ProductsController()
 
-productsRoutes.get(
-  "/:id",
-  myMiddleware,
-  (request: Request, response: Response) => {
-    const { id } = request.params
-    const { name } = request.query
+productsRoutes.get("/", myMiddleware, productsController.index)
 
-    response.send(`Hello world! ${id}, query: ${name}`)
-  },
-)
+productsRoutes.post("/", productsController.create)
 
-productsRoutes.post("/", (request: Request, response: Response) => {
-  const { name, price } = request.body
-
-  response.status(201).json(`Hello world! ${name} - ${price}`)
-})
+export { productsRoutes }
