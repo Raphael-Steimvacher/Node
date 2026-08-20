@@ -2,36 +2,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "minha-primeira-api: npm run dev",
+      "name": "Executar projeto: escolher pasta",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "cwd": "${workspaceFolder}/minha-primeira-api",
-      "console": "externalTerminal",
-      "restart": true,
-      "autoAttachChildProcesses": true,
-      "skipFiles": ["<node_internals>/**"]
-    },
-    {
-      "name": "supports-tickets: npm run dev",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "cwd": "${workspaceFolder}/supports-tickets",
-      "console": "externalTerminal",
-      "restart": true,
-      "autoAttachChildProcesses": true,
-      "skipFiles": ["<node_internals>/**"]
-    },
-    {
-      "name": "api-rest: npm run dev",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "cwd": "${workspaceFolder}/api-rest",
+      "cwd": "${workspaceFolder}/${input:projectFolder}",
       "console": "externalTerminal",
       "restart": true,
       "autoAttachChildProcesses": true,
@@ -45,6 +21,19 @@
       "cwd": "${fileDirname}",
       "console": "externalTerminal",
       "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "projectFolder",
+      "type": "pickString",
+      "description": "Escolha o projeto que deseja executar",
+      "options": [
+        "minha-primeira-api",
+        "supports-tickets",
+        "api-rest",
+        "query-builder"
+      ]
     }
   ]
 }
