@@ -4,6 +4,7 @@
     "editor.insertSpaces": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
 
     // ===== Ações executadas ao salvar =====
     "editor.codeActionsOnSave": {

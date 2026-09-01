@@ -1,39 +1,35 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Executar projeto: escolher pasta",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "cwd": "${workspaceFolder}/${input:projectFolder}",
-      "console": "externalTerminal",
-      "restart": true,
-      "autoAttachChildProcesses": true,
-      "skipFiles": ["<node_internals>/**"]
-    },
-    {
-      "name": "Node: depurar arquivo aberto",
-      "type": "node",
-      "request": "launch",
-      "program": "${file}",
-      "cwd": "${fileDirname}",
-      "console": "externalTerminal",
-      "skipFiles": ["<node_internals>/**"]
-    }
-  ],
-  "inputs": [
-    {
-      "id": "projectFolder",
-      "type": "pickString",
-      "description": "Escolha o projeto que deseja executar",
-      "options": [
-        "minha-primeira-api",
-        "supports-tickets",
-        "api-rest",
-        "query-builder"
-      ]
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar projeto: escolher pasta",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}/${input:projectFolder}",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "name": "Node: depurar arquivo aberto",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${fileDirname}",
+            "console": "externalTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectFolder",
+            "type": "pickString",
+            "description": "Escolha o projeto que deseja executar",
+            "options": [
+                "minha-primeira-api",
+                "supports-tickets",
+                "api-rest",
+                "query-builder"
+            ]
+        }
+    ]
 }
